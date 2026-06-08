@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Personal - Wilson Anrrango</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Capa de fondo fija con tu animación de After Effects -->
+    <div class="fondo-animado-sitio"></div>
+
+    <header class="sitio-header">
+        <div class="header-contenedor">
+            <!-- Logo principal restaurado a logo.png -->
+            <div class="logo-contenedor">
+                <img src="imagenes y videos/logo.png" alt="Logo" class="logo-img">
+            </div>
+            <nav class="navegacion-principal">
+                <a href="#inicio">Inicio</a>
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección Hero con fondo esmerilado -->
+        <section id="inicio" class="seccion-hero">
+            <div class="hero-contenedor glass-panel">
+                <div class="hero-col-izquierda">
+                    <h1 class="hero-titulo">Hola, soy Wilson Anrrango</h1>
+                    <h2 class="hero-subtitulo">Multimedia y Producción Audiovisual</h2>
+                    <a href="#proyectos" class="btn-proyectos">Ver proyectos</a>
+                </div>
+                <!-- Círculo grande actualizado con logo 23-01.jpg -->
+                <div class="hero-col-derecha" id="sobre-mi">
+                    <img src="imagenes y videos/logo 23-01.jpg" alt="Wilson Anrrango" class="perfil-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Proyectos organizada en cuadrícula -->
+        <section id="proyectos" class="seccion-proyectos">
+            <h2 class="titulo-seccion">Mis Proyectos</h2>
+            <div class="proyectos-grid">
+                
+                <!-- Tarjeta 1: secondary action.gif -->
+                <article class="proyecto-tarjeta glass-card">
+                    <div class="img-wrapper">
+                        <img src="imagenes y videos/secondary action.gif" alt="Acción Secundaria" class="proyecto-img">
+                    </div>
+                    <div class="proyecto-contenido">
+                        <h3>secondary action</h3>
+                        <p>Acción secundaria: movimiento complementario que refuerza la acción principal y aporta realismo al personaje. </p>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2: SLOW IN & SLOW OUT.gif -->
+                <article class="proyecto-tarjeta glass-card">
+                    <div class="img-wrapper">
+                        <img src="imagenes y videos/SLOW IN & SLOW OUT.gif" alt="Slow In & Out" class="proyecto-img">
+                    </div>
+                    <div class="proyecto-contenido">
+                        <h3>SLOW IN & SLOW OUT</h3>
+                        <p>Principio de animación que define cómo un objeto comienza y termina su movimiento, creando una sensación de masa y realismo.</p>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3: dnx jpg-02.jpg reubicado como proyecto visual -->
+                <article class="proyecto-tarjeta glass-card">
+                    <div class="img-wrapper">
+                        <img src="imagenes y videos/ani-4.gif" alt="Diseño DNX" class="proyecto-img">
+                    </div>
+                    <div class="proyecto-contenido">
+                        <h3>pose to pose</h3>
+                        <p>Hacer la acción cuadro por cuadro o con poses clave.</p>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 4: Nueva animación ani-5.gif de tu carpeta -->
+                <article class="proyecto-tarjeta glass-card">
+                    <div class="img-wrapper">
+                        <img src="imagenes y videos/ani-5.gif" alt="Animación" class="proyecto-img">
+                    </div>
+                    <div class="proyecto-contenido">
+                        <h3>Follow Through y Overlapping Action</h3>
+                        <p>as partes del cuerpo o la ropa continúan moviéndose después de que la acción principal termina, creando movimientos más naturales y realistas.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Sección Habilidades -->
+        <section class="seccion-habilidades">
+            <h2 class="titulo-seccion">HABILIDADES</h2>
+            <div class="habilidades-grid">
+                <div class="habilidad-tarjeta glass-card">
+                    <h3>animacion</h3>
+                </div>
+                <div class="habilidad-tarjeta glass-card">
+                    <h3>Fotografía Profesional</h3>
+                </div>
+                <div class="habilidad-tarjeta glass-card">
+                    <h3>Postproducción</h3>
+                </div>
+                <div class="habilidad-tarjeta glass-card">
+                    <h3>Producción Audiovisual
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="seccion-contacto">
+            <div class="contacto-contenedor glass-panel">
+                <div class="contacto-col-izquierda">
+                    <h2 class="contacto-titulo">¿Tienes un proyecto en mente?</h2>
+                    <p class="contacto-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac ex sit amet diam hendrerit dapibus. Vestibulum ante ipsum primis in faucibus.</p>
+                </div>
+                <div class="contacto-col-derecha">
+                    <form class="formulario-contacto" action="#" method="POST">
+                        <input type="text" class="form-input" placeholder="Nombre" required>
+                        <input type="email" class="form-input" placeholder="Correo" required>
+                        <textarea class="form-input form-textarea" placeholder="Mensaje" rows="4" required></textarea>
+                        <button type="submit" class="btn-enviar">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="sitio-footer">
+        <div class="footer-contenedor">
+            <p class="copyright">&copy; 2026 Wilson Anrrango. Todos los derechos reservados.</p>
+            <div class="redes-sociales">
+                <a href="https://www.instagram.com/darlex2.05?igsh=MTFubDlrMmMyOGdtcQ==" target="_blank" class="red-enlace">Instagram</a>
+                <a href="https://github.com/zcr-Darlex" target="_blank" class="red-enlace">GitHub</a>
+                <a href="https://www.behance.net/zcrdani20cranel" target="_blank" class="red-enlace">Behance</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

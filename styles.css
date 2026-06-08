@@ -1,0 +1,406 @@
+/* ==========================================================================
+   1. CONFIGURACIÓN GENERAL Y TIPOGRAFÍA
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Algerian', 'Arial', sans-serif;
+    color: #FFFFFF; /* Texto general en blanco para resaltar sobre el fondo oscuro */
+    background-color: #050505;
+    overflow-x: hidden;
+}
+
+/* El video/GIF de After Effects fijo de fondo absoluto con tinte cinematográfico */
+.fondo-animado-sitio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('imagenes y videos/video de creacion en after efest.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilos de Efecto de Vidrio (Glassmorphism) */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+}
+
+.glass-card {
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 240, 255, 0.15);
+}
+
+/* ==========================================================================
+   2. HEADER: COMPACTO CON TU NUEVO LOGO
+   ========================================================================== */
+.sitio-header {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 15px 40px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.header-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tu nuevo logo dnx configurado exactamente a 50x50 píxeles */
+.logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #00FFFF;
+}
+
+.navegacion-principal {
+    display: flex;
+    gap: 30px;
+}
+
+.navegacion-principal a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navegacion-principal a:hover {
+    color: #00FFFF;
+}
+
+/* ==========================================================================
+   3. HERO SECCIÓN
+   ========================================================================== */
+.seccion-hero {
+    padding: 150px 40px 80px 40px; /* Margen superior para no taparse con el header fijo */
+    width: 100%;
+}
+
+.hero-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    gap: 40px;
+}
+
+.hero-col-izquierda {
+    flex: 1;
+}
+
+.hero-titulo {
+    font-size: 3rem;
+    color: #00FFFF; /* Tono cian llamativo */
+    text-shadow: 0px 2px 10px rgba(0, 240, 255, 0.3);
+    margin-bottom: 10px;
+}
+
+.hero-subtitulo {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.btn-proyectos {
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    padding: 12px 28px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-proyectos:hover {
+    background-color: #00FFFF;
+    transform: scale(1.05);
+}
+
+.hero-col-derecha {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.perfil-img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #00FFFF;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+}
+
+/* ==========================================================================
+   4. PROYECTOS: ACTUALIZADO A 4 CUADROS (GRID DINÁMICO)
+   ========================================================================== */
+.seccion-proyectos {
+    padding: 80px 40px;
+    width: 100%;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #FFFFFF;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Auto-ajustable según pantalla */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 25px;
+}
+
+.proyecto-tarjeta {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-tarjeta:hover {
+    transform: translateY(-8px);
+    border-color: #00FFFF;
+    box-shadow: 0 10px 25px rgba(0, 240, 255, 0.3);
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.proyecto-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.proyecto-tarjeta:hover .proyecto-img {
+    transform: scale(1.08); /* Animación de zoom en la imagen */
+}
+
+.proyecto-contenido {
+    padding: 20px;
+}
+
+.proyecto-contenido h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #00FFFF;
+}
+
+.proyecto-contenido p {
+    font-family: Arial, sans-serif;
+    color: #CCCCCC;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   5. HABILIDADES
+   ========================================================================== */
+.seccion-habilidades {
+    padding: 80px 40px;
+    width: 100%;
+}
+
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.habilidad-tarjeta {
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.habilidad-tarjeta:hover {
+    background: rgba(0, 240, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.habilidad-tarjeta h3 {
+    font-size: 1.1rem;
+    color: #FFFFFF;
+}
+
+/* ==========================================================================
+   6. CONTACTO
+   ========================================================================== */
+.seccion-contacto {
+    padding: 80px 40px;
+    width: 100%;
+}
+
+.contacto-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px;
+    gap: 50px;
+}
+
+.contacto-col-izquierda {
+    flex: 1;
+}
+
+.contacto-titulo {
+    font-size: 2.2rem;
+    color: #00FFFF;
+    margin-bottom: 20px;
+}
+
+.contacto-texto {
+    font-family: Arial, sans-serif;
+    color: #E0E0E0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.contacto-col-derecha {
+    flex: 1;
+    width: 100%;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #00FFFF;
+}
+
+.form-textarea {
+    resize: none;
+}
+
+.btn-enviar {
+    background-color: #00FFFF;
+    color: #000000;
+    border: none;
+    padding: 15px;
+    font-family: 'Algerian', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(0, 240, 255, 0.4);
+}
+
+/* ==========================================================================
+   7. FOOTER
+   ========================================================================== */
+.sitio-footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 40px 20px;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.copyright {
+    font-family: Arial, sans-serif;
+    color: #888888;
+    font-size: 0.9rem;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 25px;
+}
+
+.red-enlace {
+    color: #CCCCCC;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.red-enlace:hover {
+    color: #00FFFF;
+}
+
+/* Responsive total */
+@media (max-width: 768px) {
+    .hero-contenedor, .contacto-contenedor {
+        flex-direction: column;
+        padding: 25px;
+    }
+    .perfil-img {
+        width: 260px;
+        height: 260px;
+    }
+    .hero-titulo {
+        font-size: 2.2rem;
+    }
+}
